@@ -8,6 +8,19 @@ export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
     port: 8080,
+    hmr: {
+      host: 'localhost',
+    },
+  },
+  preview: {
+    host: true,
+    port: 8080,
+  },
+  build: {
+    target: 'esnext',
+  },
+  define: {
+    'process.env': {}
   },
   plugins: [
     react(),
