@@ -5,7 +5,9 @@
       "src": "package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "dist"
+        "distDir": "dist",
+        "installCommand": "npm install --prefer-offline",
+        "buildCommand": "vite build"
       }
     }
   ],
@@ -15,7 +17,6 @@
       "destination": "/index.html"
     }
   ],
-  "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "trailingSlash": false,
   "headers": [
